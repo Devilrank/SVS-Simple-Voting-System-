@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    background: linear-gradient(to bottom, #99c2ff 70%, #99c2ff 70%,#0052cc 100% );
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.card{
+    width: 600px;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 24px;
+    cursor: pointer;
+    overflow: hidden;
+    max-width: clamp(320px, 50vw, 540px);
+    min-width: 320px;
+    min-height: 280px;
+}
+
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    backdrop-filter: blur(8px);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,6);
+    border-radius: 10px;
+    /* margin-top: 40%; */
+}
+
+.card .card-header h1{
+    margin: 0 0 30px;
+    padding: 0;
+    color: #000000;
+    text-align: center;
+}
+
+.card .content .user-box{
+    position: relative;
+}
+
+.card .content .user-box input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #0a0a0a;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    background: transparent;
+}
+
+.card .user-box label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000000;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.card .content .user-box input:focus ~ label,
+.card .content .user-box input:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+.card  form  .btn{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow:hidden;
+    transition: .5d;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    background: linear-gradient(to bottom, );
+}
+
+.card .btn:hover{
+    background: #03e9f4;
+    color:#fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5x #03e9f4,
+            0 0 25px #03e9f4,
+            0 0 50px #03e9f4,
+            0 0 100px #03e9f4;
+}
+
+.card .btn span{
+    position: absolute;
+    display: block;
+}
+
+.card .btn span:Nth-child(1)
+{
+top: 0;
+left: -100%;
+width: 100%;
+height: 2px;
+animation-duration: btn-anima1 1s linear infinite;
+}
+
+@keyframes btn-anim1{
+    0%{left: -100%;}
+    50%,100%{left: 100%;}
+}
+
+.card .btn span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    animation:btn-anim2 1s linear infinite;
+    animation: delay 25s;;
+}
+
+@keyframes btn-anim2{
+    0%{
+        top:-100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+
+.card .btn span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    animation: btn-anim3 1s linear infinite;
+    animation: btn-anim3 is linear infinite;
+    animation-delay:.5s;
+}
+
+@keyframes btn-anim3{
+    0%{
+        right:-100%;
+    }
+    50%,100%{
+        right:100%;
+    }
+}
+
+.card .btn span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height:100px;
+    animation: btn-anim4 1s linear infinite;
+}
+
+@keyframes btn-anim4{
+    0%{
+        bottom:-100%;
+    }
+    50%,100%
+    {
+        bottom: 100px;
+    }
+}

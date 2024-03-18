@@ -1,0 +1,107 @@
+
+.vote-box h2{
+    margin: 0 0 30px;
+    padding: 0;
+    color: #080808;
+    text-align: center;
+}
+
+.vote-box .user-box{
+    position: relative;
+}
+
+.vote-box .user-box input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #080808;
+    outline: none;
+    background: transparent;
+}
+
+.vote-box .user-box label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color:#080808;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.vote-box .user-box input:focus ~ label,
+.vote-box .user-box input:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+.vote-box  form  .btn{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow:hidden;
+    transition: .5d;
+    margin-top: 40px;
+    letter-spacing: 4px;
+}
+
+.vote-box .btn:hover{
+    background: #03e9f4;
+    color:#fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5x #03e9f4,
+            0 0 25px #03e9f4,
+            0 0 50px #03e9f4,
+            0 0 100px #03e9f4;
+}
+
+.vote-box .btn span{
+    position: absolute;
+    display: block;
+}
+
+.vote-box .btn span:Nth-child(1)
+{
+top: 0;
+left: -100%;
+width: 100%;
+height: 2px;
+animation-duration: btn-anima1 1s linear infinite;
+}
+
+
+.vote-box .btn span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: 25s;
+}
+
+.vote-box .btn span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    animation: btn-anim3 1s linear infinite;
+    animation: btn-anim3 is linear infinite;
+    animation-delay:.5s;
+}
+
+.vote-box .btn span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height:100px;
+    animation: btn-anim4 1s linear infinite;
+}
