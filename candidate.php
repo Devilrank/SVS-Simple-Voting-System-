@@ -1,18 +1,3 @@
-<?php
-session_start();
-
-$userprofile = $_SESSION['user_name'];
-if($userprofile == true)
-{
-}
-else
-{
-    header("location: Admin-login.php");
-}
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,19 +5,30 @@ else
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="Admin-st/candidate.css">
+    <link rel="stylesheet" href="candidate.css">
     <link rel="stylesheet" href="Admin-st/button.css">
-    <title>Nomination's</title>
+    <link rel="stylesheet" href="nav.css">
+    <title>Nominations</title>
 </head>
 <body>
 <header>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top ">
+        <nav class="nav navbar navbar-expand-sm bg-dark navbar-dark fixed-top ">
+            <input type="checkbox" id="nav-check">
             <div class="container-fluid" style="padding: 0;" >
                 <a class="navbar-brand" href="#">
                     <img src="img/logo.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">  Simple Voting System
                 </a>
             </div>
-        <a class="bn31" href="Admin-panel.php" style="width: 11rem;"  ><span class="bn31span"><b>Back</b></span></a>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+        <div class="nav-links" >
+        <a href="index.php">Back</a>
+        </div>
         </nav>
 </header>
     <div class="container" style="margin-top: 80px;" >

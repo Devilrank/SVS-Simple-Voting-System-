@@ -6,7 +6,7 @@ if($userprofile == true)
 }
 else
 {
-    header("location: Admin-login.php");
+    header("location: ../index.php");
 }
 ?>
 <!DOCTYPE html>
@@ -16,7 +16,7 @@ else
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="Admin-st/Admin-panel.css">
+    <link rel="stylesheet" href="Admin-st/nav.css">
     <title>Admin Panel</title>
     <style>
 
@@ -54,7 +54,26 @@ else
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top ">
+  <nav class=" nav navbar navbar-expand-sm bg-dark navbar-dark fixed-top ">
+      <input type="checkbox" id="nav-check">
+        <div class="container-fluid" style="padding: 0;" >
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">  Simple Voting System
+            </a>
+        </div>
+        <div class="nav-btn" >
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+        <div class="nav-links" id="nav-links" >
+          <a href="logout.php"><b>Logout</b></a>
+        <a href="Addadmin.php"><b>Add Admin</b></a>
+        </div>
+    </nav>
+    <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top ">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="img/logo.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">    Simple Voting System
@@ -62,7 +81,7 @@ else
       </div>
       <a class="bn31" href="Addadmin.php" style="width: 13rem;"><span class="bn31span"><b>Add Admin</b></span></a>
       <a class="bn31" href="logout.php" style="width: 11rem;"><span class="bn31span"><i class="gg-log-off"></i><b>Logout</b></span></a>
-    </nav>
+    </nav> -->
   </header>
   <main>
   <div class="featurs" style="margin: 12% 0;">
@@ -75,16 +94,8 @@ else
             <h2 class="normalFont" style="font-size:28px; margin-top: 40px; font-weight: 700;">VOTER'S LIST</h2>
             </A>
         </div>
-        </div>
-        
-        <div class=" col-sm-4 text-center card">
-          <div class="img" style="padding:10px; margin-top: 30px; ">
-            <A href="candidate.php" style="text-decoration: none; color: black; " ><img src="img/Nominee.png" width="130" height="130" alt=""/>
-            <h2 class="normalFont" style="font-size:28px; margin-top: 40px; font-weight: 700;">NOMINATION</h2>
-            </A>
-          </div>
-        </div>
 
+        </div>
         <div class="col-sm-4 text-center card">
           <div class="img" style="padding:10px; margin-top: 30px;">
             <A href="poll.php" style="text-decoration: none; color: black;" ><img src="img/Stats.png" width="130" height="130" alt=""/>

@@ -7,7 +7,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 {
     require"Admin/config.php";
 
-    $conn = new mysqli($host, $username, $password, $dbname);
+    $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
 
     if($conn->connect_error)
     {
@@ -65,6 +65,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="Admin/Admin-st/button.css">
     <link rel="stylesheet" href="vault.css">
+    <link rel="stylesheet" href="nav.css">
     <title>Voting Page</title>
 
     <style>
@@ -103,13 +104,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 </head>
 <body style="background: linear-gradient(to bottom, #99c2ff 70%, #99c2ff 70%,#0052cc 100% );">
     <header>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top ">
-            <div class="container-fluid">
+    <nav class="nav navbar navbar-expand-sm bg-dark navbar-dark fixed-top ">
+            <input type="checkbox" id="nav-check">
+            <div class="container-fluid" style="padding: 0;" >
                 <a class="navbar-brand" href="#">
-                <img src="img/logo.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">  Simple Voting System
+                    <img src="img/logo.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">  Simple Voting System
                 </a>
             </div>
-            <a class="bn31" href="index.html" style="width: 10rem;"><span class="bn31span"><b>Home</b></span></a>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+        <div class="nav-links" >
+        <a href="index.php">Back</a>
+        </div>
         </nav>
     </header>
         <div class="featurs">

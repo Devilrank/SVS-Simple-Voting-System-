@@ -8,7 +8,7 @@ if($userprofile == true)
 }
 else
 {
-    header("location: Admin-login.php");
+    header("location: ../index.php");
 }
 
 $user = 0;
@@ -85,7 +85,7 @@ else
     <!-- <link rel="stylesheet" href="Admin-st/Signup.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="Admin-st/button.css">
+    <link rel="stylesheet" href="Admin-st/nav.css">
     <title>Admin Signup</title>
 <style>
     *{
@@ -282,14 +282,24 @@ animation-duration: btn-anima1 1s linear infinite;
 </head>
 <body  style="background: linear-gradient(to bottom, #99c2ff 70%, #99c2ff 70%,#0052cc 100% );" >
 <header>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-            <img src="img/logo.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">  Simple Voting System
-            </a>
+<nav class="nav navbar navbar-expand-sm bg-dark navbar-dark fixed-top ">
+            <input type="checkbox" id="nav-check">
+            <div class="container-fluid" style="padding: 0;" >
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">  Simple Voting System
+                </a>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+        <div class="nav-links" >
+        <a href="Admin-panel.PHP">Back</a>
         </div>
-        <a class="bn31" href="Admin-panel.php" style="width: 11rem;"  ><span class="bn31span"><b>Back</b></span></a>
-    </nav>
+        </nav>
 </header>
 <main>
     <div class="container" >
